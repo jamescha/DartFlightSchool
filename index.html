@@ -61,7 +61,7 @@
   <li><a href="https://www.dartlang.org/">Dart Lang Site</a></li>
   <li><a href="https://www.dartlang.org/dart-by-example/">Dart By Example</a></li>
   <li><a href="https://api.dartlang.org/apidocs/channels/stable/#home">API Docs</a></li>
-  <li><a href="http://try.dartlang.org/">Try Dart! - Real Time</a></li>
+  <li><a href="http://try.dartlang.org/">Try Dart! - Real TimeI'l g</a></li>
 </ul>
 
 <h3>
@@ -79,12 +79,36 @@
 <h3>
 <a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Exit Survey</h3>
 <a href="http://goo.gl/7tP7t6">Exit Survey</a>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>FAQ</h3>
+  <h5>Without the === how do I do a type comparison?</h5>
+  <p>Use the variable.runtimetype.</p> 
+  <hr>
+  <h5>What is the scope of Variables?</h5>
+  <p>Lexical Scope
+  Dart is a lexically scoped language, which means that the scope of variables is determined statically, simply by the layout of the code. You can “follow the curly braces outwards” to see if a variable is in scope.</p>
+  <hr>
+  <h5>Fold vs Reduce</h5>
+  <p>Fold takes an explicit initial value for the accumulator while reduce uses the first element of the input list as the initial accumulator value. As a result, reduce throws an exception on an empty input list.</p>
+  <hr>
+  <h5>Getter and Setters</h5>
+  <p> Fields and getters/setters are completely indistinguishable. You can expose a field in a class and later wrap it in a getter and setter without having to touch any code that uses that field.</p>
+  <hr>
+  <h5>Why do type annotations have no effect at runtime?</h5>
+  <p>One reason is that type annotations are optional. If they affect run-time behavior, then what happens to var declarations? We might always give them behavior as if they were typed Dynamic, but that would be strange when the programmer knows the type but didn’t care to type it out. We might give them behavior depending on what static type is derived by type inference, but that would make your program behavior depend on how complete the inference manages to be, which can be difficult to predict.
+
+  Another reason is that type annotations can be completely erroneous. The program is still allowed to run, as best it can, if runtime checking is not turned on. Making its behavior depend on incorrect type declarations would be very strange.
+
+  Finally, decoupling the static type annotation system from runtime behavior allows it more freedom to evolve. Imagine two static analysis modes, one more conservative and one more permissive: it’s reasonable for your choice of mode to affect whether a given program compiles warning-free, but it would be unreasonable to assign the program two different runtime meanings.</p>
+  <hr>
+  
       </section>
       <footer>
         <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		 
+     
   </body>
 </html>
